@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Online Base64 Decoder or Encoder" />
+    <meta name="keywords" content="base64, decode, encode, online, tool" />
+    <title>Base64 Decoder/Encoder</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <meta property="og:title" content="Online Base64 Decoder or Encoder" />
+    <meta property="og:url" content="https://www.debjitbiswas.com/base64-dencoder" />
+    <meta property="og:image" content="https://www.debjitbiswas.com/images/site-thumb.jpg" />
+    <meta proprety="og:description" content="A nano UI to decode or encode base64 strings">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="
+        crossorigin="anonymous">
+    <style>
+        html {
+            font-size: 14px;
+        }
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        .container {
+            max-width: 960px;
+        }
+        .form-control::placeholder { color: #DDD; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Base64 Dencoder</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="button-toolbar pt-md-5 pb-md-4">
+            <div id="paste-from-clipboard-container" class="btn-group mr-2" role="group" hidden>
+                <button id="paste-from-clipboard" class="btn btn-primary" type="button">Paste from clipboard</button>
+            </div>
+            <div class="btn-group mr-2" role="group">
+                <button id="decode-btn" type="button" class="btn btn-success">Decode</button>
+            </div>
+            <div class="btn-group mr-2" role="group">
+                <button id="clear-input" class="btn btn-danger" type="button">Clear Input</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <textarea class="form-control" id="b64-e" rows="10" placeholder="QXV0IGVzdCBzaW50IHBhcmlhdHVyIGN1cGlkaXRhdGUuIFJlcnVtIHBhcmlhdHVyIGV0IG5hbSBhdXQgZXhwbGljYWJvLiBIYXJ1bSB1dCBwbGFjZWF0IGxpYmVybyBtaW5pbWEgYmxhbmRpdGlpcy4gRG9sb3JlbSBlYSB2b2x1cHRhcyBpbXBlZGl0IGVzdC4="></textarea>
+            </div>
+            <div class="col-md">
+                <textarea class="form-control form-control-plaintext" id="b64-d" rows="10" placeholder="Aut est sint pariatur cupiditate. Rerum pariatur et nam aut explicabo. Harum ut placeat libero minima blanditiis. Dolorem ea voluptas impedit est." readonly></textarea>
+            </div>
+        </div>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <p>
+                The source for this website is available on <a href="https://www.github.com/debjitbis08/base64-dencoder/">Github</a>. Please report any bugs on <a href="https://www.github.com/debjitbis08/base64-dencoder/issues/">Github Issues</a>.
+            </p>
+            <p>
+                <span
+                    xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Base64 Dencoder</span> by <a xmlns:cc="http://creativecommons.org/ns#"
+                    href="https://www.debjitbiswas.com" property="cc:attributionName" rel="cc:attributionURL">Debjit
+                    Biswas</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
